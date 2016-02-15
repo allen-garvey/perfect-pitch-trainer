@@ -1,0 +1,137 @@
+$right_margin: 50px;
+$blue_theme : #1e90ff;
+$active_opacity: .2;
+$button_side_length : 100px;
+
+body{
+	font-family: "Helvetica Neue", "Droid Sans", Helvetica, Arial, sans-serif;
+	padding:15px;
+	font-size: 16px;
+}
+main{
+	max-width: 850px;
+	margin: 0 auto;
+}
+header{
+	text-align: center;
+	font-size: .8em;
+
+}
+nav{
+	padding: 5px;
+	text-align: center;
+}
+.toolbar{
+	@extend nav;
+	margin-top: 5px;
+}
+.controls{
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+button{
+	border: 1px solid black;
+	background-color: inherit;
+	font-size: 1.2em;
+	width: $button_side_length;
+	height: $button_side_length;
+	display: inline-block;
+	margin: 5px;
+	text-align: center;
+	padding: 0;
+}
+
+.button_clean:active{
+	color: $blue_theme;
+	background-color: darken(white, 3%);
+	opacity: $active_opacity * 2;
+}
+.button_wrong{
+	background-color: lighten(red, 15%);
+}
+.button_right{
+	background-color: lighten(#32cd32, 6%);
+}
+.results{
+	text-align: center;
+	margin-bottom: 40px;
+	height: 40px;
+}
+p, h1{
+	margin: 0;
+}
+
+svg{
+	fill: darken($blue_theme, 10%);
+	vertical-align: middle;
+}
+
+svg:active{
+	fill: #00bfff;
+	opacity: $active_opacity;
+}
+
+%icon{
+	height: 75px;
+	width: 75px;
+	display: inline-block;
+	line-height: 75px;
+}
+.icon_left{
+	@extend %icon;
+	float: left;
+}
+.icon_right{
+	@extend %icon;
+	float: right;
+	margin-right: $right_margin - 25px;
+}
+.icon_center{
+	@extend %icon;
+	font-size: 1.3em;
+	text-decoration: none;
+	color: darken($blue_theme, 10%);
+}
+a.icon_center:active{
+	opacity: $active_opacity;
+}
+.toolbar_center{
+	@extend .icon_center;
+	color: black;
+}
+.status{
+	font-size: 135%;
+	text-align: right;
+	margin-right: $right_margin;
+	margin-bottom: 15px;
+}
+//animation on fade-in
+.nav_animated{
+	transition:all 1s ease-out;
+	-moz-transition:all 1s ease-out;
+	-o-transition:all 1s ease-out;
+	-webkit-transition:all 1s ease-out;
+	display:block!important;
+	opacity:1;
+
+}
+//instant fade-out
+.nav_animated.ng-hide {
+	opacity:0;
+	display: none;
+	transition:0;
+	-moz-transition:0;
+	-o-transition:0;
+	-webkit-transition:0;
+}
+
+.hidden{
+	display:none;
+}
+
+@media screen and (max-width: $button_side_length * 4){
+	button{
+		width: $button_side_length * .75;
+		height: $button_side_length * .75;
+	}
+}

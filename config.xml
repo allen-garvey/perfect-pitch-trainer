@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.allengarvey" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>PerfectPitchTrainer</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <platform name="ios">    
+		<icon src="res/ios/icon-60@3x.png" width="180" height="180" />
+		<icon src="res/ios/icon-60.png" width="60" height="60" />
+		<icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+		<icon src="res/ios/icon-40.png" width="40" height="40" />
+		<icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+
+		<splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+		<splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+		<splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+		<splash src="res/screen/ios/Default-667h.png" width="750" height="1334"/>
+		<splash src="res/screen/ios/Default-736h.png" width="1242" height="2208"/>
+     </platform>
+</widget>
